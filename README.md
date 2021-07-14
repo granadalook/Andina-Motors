@@ -1,0 +1,2 @@
+# Autos
+ javaScript.objetos
