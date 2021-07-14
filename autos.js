@@ -52,8 +52,24 @@ class autos {
     }
   }
 }
+
+function ordenarCarros() {
+  carros.sort((a, b) => (a.modelo > b.modelo ? 1 : -1)); // if ternario  (condicion) ? resultado 1 : otro resultado :
+  /* carros.sort(function (a, b) {
+    if (a.modelo > b.modelo) {
+      return 1;
+    }
+    if (a.modelo < b.modelo) {
+      return -1;
+    }
+    return 0;
+  });
+  return carros; */
+}
+
+let carros = []; //mayor modelo
+
 let crearCoche = false;
-let carros = [];
 do {
   let respuesta = prompt("Quieres crear un coche");
   if (respuesta == "si") {
@@ -66,6 +82,7 @@ do {
 
     carros.push(new autos(marca, peso, potencia, color, modelo));
   } else {
+    ordenarCarros();
     crearCoche = false;
   }
 } while (crearCoche);
