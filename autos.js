@@ -8,31 +8,35 @@ class autos {
   }
 
   mostrasAutos() {
-    document.write(
-      "Este auto es un " +
-        this.marca +
-        " de color " +
-        this.color +
-        " tiene un peso de " +
-        this.peso +
-        " kilos y cuenta con " +
-        this.potencia +
-        " caballos de fuerza fabricado en el año " +
-        this.modelo +
-        "<br>"
-    );
+    document
+      .getElementById("escribir")
+      .append(
+        "Este auto es un " +
+          this.marca +
+          " de color " +
+          this.color +
+          " tiene un peso de " +
+          this.peso +
+          " kilos y cuenta con " +
+          this.potencia +
+          " caballos de fuerza fabricado en el año " +
+          this.modelo +
+          "<br>"
+      );
   }
 
   pesopoten() {
     let relacion = this.peso / this.potencia;
-    document.write(
-      "  la relacion peso potencia del " +
-        this.marca +
-        " es de " +
-        relacion +
-        " kl/hp" +
-        "<br><br>"
-    );
+    document
+      .getElementById("escribir")
+      .append(
+        "  la relacion peso potencia del " +
+          this.marca +
+          " es de " +
+          relacion +
+          " kl/hp" +
+          "<br><br>"
+      );
     if (relacion > 0 && relacion < 1) {
       alert(
         "El " +
@@ -52,47 +56,47 @@ class autos {
     }
   }
 }
-
-function ordenarCarros() {
-  carros.sort((a, b) => (a.modelo > b.modelo ? 1 : -1)); // if ternario  (condicion) ? resultado 1 : otro resultado :
-  /* carros.sort(function (a, b) {
-    if (a.modelo > b.modelo) {
-      return 1;
-    }
-    if (a.modelo < b.modelo) {
-      return -1;
-    }
-    return 0;
-  });
-  return carros; */
-}
-
+let auto = [];
 let carros = []; //mayor modelo
-
-let crearCoche = false;
-do {
-  let respuesta = prompt("Quieres crear un coche");
-  if (respuesta == "si") {
-    crearCoche = true;
-    let marca = prompt(" Marca de tu auto");
-    let color = prompt(" Color de tu auto");
-    let modelo = prompt(" Modelo de tu auto");
-    let potencia = prompt(" Potencia de tu auto en HP");
-    let peso = prompt(" Peso de tu auto KL");
-
-    carros.push(new autos(marca, peso, potencia, color, modelo));
-  } else {
-    ordenarCarros();
-    crearCoche = false;
-  }
-} while (crearCoche);
-
 function mostrar() {
+  console.log(carros);
+  let marca = document.getElementById("marca").value;
+  let color = document.getElementById("color").value;
+  let modelo = document.getElementById("modelo").value;
+  let potencia = document.getElementById("potencia").value;
+  let peso = document.getElementById("peso").value;
+
+  verLocalStorage();
+  for (let i = 0; i < auto.length; i++) {
+    carros.push(
+      new autos(
+        auto[i].marca,
+        auto[i].peso,
+        auto[i].potencia,
+        auto[i].color,
+        auto[i].modelo
+      )
+    );
+  }
+  carros.push(new autos(marca, peso, potencia, color, modelo));
   for (let index = 0; index < carros.length; index++) {
     carros[index].mostrasAutos();
-
     carros[index].pesopoten();
   }
+  ordenarCarros();
+  guardarLocalStorage();
 }
-
-mostrar();
+function ordenarCarros() {
+  carros.sort((a, b) => (a.modelo > b.modelo ? 1 : -1)); // if ternario  (condicion) ? resultado 1 : otro resultado :
+}
+function guardarLocalStorage() {
+  localStorage.setItem("autos", JSON.stringify(carros));
+}
+function verLocalStorage() {
+  if (localStorage.getItem("autos")) {
+    auto = JSON.parse(localStorage.getItem("autos"));
+    console.log(auto);
+  } else {
+    alert("No hay datos en local storage");
+  }
+}
