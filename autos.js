@@ -8,9 +8,8 @@ class autos {
   }
 
   mostrasAutos() {
-    document
-      .getElementById("escribir")
-      .append(
+    document.getElementById("escribir").innerHTML+=
+      
         "Este auto es un " +
           this.marca +
           " de color " +
@@ -22,21 +21,19 @@ class autos {
           " caballos de fuerza fabricado en el año " +
           this.modelo +
           "<br>"
-      );
-  }
+      
+    }
 
   pesopoten() {
     let relacion = this.peso / this.potencia;
-    document
-      .getElementById("escribir")
-      .append(
+    document.getElementById("escribir2").innerHTML+=
         "  la relacion peso potencia del " +
           this.marca +
           " es de " +
           relacion +
           " kl/hp" +
           "<br><br>"
-      );
+      ;
     if (relacion > 0 && relacion < 1) {
       alert(
         "El " +
@@ -81,7 +78,7 @@ function mostrar() {
   carros.push(new autos(marca, peso, potencia, color, modelo));
   for (let index = 0; index < carros.length; index++) {
     carros[index].mostrasAutos();
-    carros[index].pesopoten();
+   /*  carros[index].pesopoten(); */
   }
   ordenarCarros();
   guardarLocalStorage();
