@@ -8,32 +8,29 @@ class autos {
   }
 
   mostrasAutos() {
-    document.getElementById("escribir").innerHTML+=
-      
-        "Este auto es un " +
-          this.marca +
-          " de color " +
-          this.color +
-          " tiene un peso de " +
-          this.peso +
-          " kilos y cuenta con " +
-          this.potencia +
-          " caballos de fuerza fabricado en el año " +
-          this.modelo +
-          "<br>"
-      
-    }
+    document.getElementById("escribir").innerHTML +=
+      "Este auto es un " +
+      this.marca +
+      " de color " +
+      this.color +
+      " tiene un peso de " +
+      this.peso +
+      " kilos y cuenta con " +
+      this.potencia +
+      " caballos de fuerza fabricado en el año " +
+      this.modelo +
+      "<br>";
+  }
 
   pesopoten() {
     let relacion = this.peso / this.potencia;
-    document.getElementById("escribir2").innerHTML+=
-        "  la relacion peso potencia del " +
-          this.marca +
-          " es de " +
-          relacion +
-          " kl/hp" +
-          "<br><br>"
-      ;
+    document.getElementById("escribir").innerHTML +=
+      "  la relacion peso potencia del " +
+      this.marca +
+      " es de " +
+      relacion +
+      " kl/hp" +
+      "<br><br>";
     if (relacion > 0 && relacion < 1) {
       alert(
         "El " +
@@ -56,7 +53,7 @@ class autos {
 let auto = [];
 let carros = []; //mayor modelo
 function mostrar() {
-  console.log(carros);
+  console.log(auto);
   let marca = document.getElementById("marca").value;
   let color = document.getElementById("color").value;
   let modelo = document.getElementById("modelo").value;
@@ -64,6 +61,7 @@ function mostrar() {
   let peso = document.getElementById("peso").value;
 
   verLocalStorage();
+  ordenarCarros();
   for (let i = 0; i < auto.length; i++) {
     carros.push(
       new autos(
@@ -78,9 +76,9 @@ function mostrar() {
   carros.push(new autos(marca, peso, potencia, color, modelo));
   for (let index = 0; index < carros.length; index++) {
     carros[index].mostrasAutos();
-   /*  carros[index].pesopoten(); */
+    carros[index].pesopoten();
   }
-  ordenarCarros();
+
   guardarLocalStorage();
 }
 function ordenarCarros() {
