@@ -52,16 +52,8 @@ class autos {
 }
 let auto = [];
 let carros = []; //mayor modelo
-function mostrar() {
-  console.log(auto);
-  let marca = document.getElementById("marca").value;
-  let color = document.getElementById("color").value;
-  let modelo = document.getElementById("modelo").value;
-  let potencia = document.getElementById("potencia").value;
-  let peso = document.getElementById("peso").value;
-
+function inicializarAutos() {
   verLocalStorage();
-  ordenarCarros();
   for (let i = 0; i < auto.length; i++) {
     carros.push(
       new autos(
@@ -73,10 +65,36 @@ function mostrar() {
       )
     );
   }
-  carros.push(new autos(marca, peso, potencia, color, modelo));
-  for (let index = 0; index < carros.length; index++) {
-    carros[index].mostrasAutos();
-    carros[index].pesopoten();
+}
+
+let primeraVez = true;
+function mostrar() {
+  console.log(auto);
+  let marca = document.getElementById("marca").value;
+  let color = document.getElementById("color").value;
+  let modelo = document.getElementById("modelo").value;
+  let potencia = document.getElementById("potencia").value;
+  let peso = document.getElementById("peso").value;
+
+  document.getElementById("marca").value = "";
+  document.getElementById("color").value = "";
+  document.getElementById("modelo").value = "";
+  document.getElementById("potencia").value = "";
+  document.getElementById("peso").value = "";
+
+  ordenarCarros();
+  let ultimoCoche = new autos(marca, peso, potencia, color, modelo);
+  carros.push(ultimoCoche);
+
+  if (primeraVez) {
+    primeraVez = false;
+    for (let index = 0; index < carros.length; index++) {
+      carros[index].mostrasAutos();
+      carros[index].pesopoten();
+    }
+  } else {
+    ultimoCoche.mostrasAutos();
+    ultimoCoche.pesopoten();
   }
 
   guardarLocalStorage();
@@ -95,3 +113,4 @@ function verLocalStorage() {
     alert("No hay datos en local storage");
   }
 }
+inicializarAutos();
