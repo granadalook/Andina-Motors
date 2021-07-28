@@ -8,6 +8,7 @@ class autos {
   }
 
   mostrasAutos() {
+    ordenarCarros();
     document.getElementById("escribir").innerHTML +=
       "Este auto es un " +
       this.marca +
@@ -82,7 +83,6 @@ function mostrar() {
   document.getElementById("potencia").value = "";
   document.getElementById("peso").value = "";
 
-  ordenarCarros();
   let ultimoCoche = new autos(marca, peso, potencia, color, modelo);
   carros.push(ultimoCoche);
 

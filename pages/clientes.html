@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clintes</title>
+    <link rel="stylesheet" href="../css/clientes.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header-container">
+      <nav class="header--nav">
+        <ul>
+          <li>
+            <a href="../index.html"
+              >HOME<img
+                src="../asset/icons/home_black_24dp.svg"
+                alt="icon home"
+            /></a>
+          </li>
+          <li>
+            <a href="nuevos.html"
+              >NUEVOS<img
+                src="../asset/icons/car_rental_black_24dp.svg"
+                alt="icon nuevos"
+            /></a>
+          </li>
+          <li>
+            <a href="clientes.html"
+              >CLIENTES<img
+                src="../asset/icons/person_add_black_24dp.svg"
+                alt="icon clientes"
+            /></a>
+          </li>
+          <li>
+            <a href="reparacion.html"
+              >REPARACION<img
+                src="../asset/icons/car_repair_black_24dp.svg"
+                alt="icon reparacion"
+            /></a>
+          </li>
+          <li>
+            <a href="entregados.html"
+              >ENTREGAR<img
+                src="../asset/icons/electric_car_black_24dp.svg "
+                alt="icon entragar"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <form class="furmu" action="">
+      <input type="text" placeholder="Nombre..." id="nombre" required /><br />
+      <input type="number" placeholder="cedula..." id="cedula" required /><br />
+      <input
+        type="tel"
+        placeholder="telefono..."
+        id="telefono"
+        required
+      /><br />
+      <input type="email" placeholder="email..." id="email" required />
+    </form>
+    <br />
+
+    <button type="submit" id="verLista">AGREGAR OTRO CLIENTE</button>
+    <button type="submit" id="logLista">VER LISTA CLIENTES</button>
+
+    <table class="blueTable">
+      <thead>
+        <tr>
+          <th>NOMBRE</th>
+          <th>CEDULA</th>
+          <th>TELEFONO</th>
+          <th>EMAIL</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4">
+            <div class="links">
+              <a href="#">&laquo;</a> <a class="active" href="#">1</a>
+              <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>
+              <a href="#">&raquo;</a>
+            </div>
+          </td>
+        </tr>
+      </tfoot>
+      <tbody id="tUsuario"></tbody>
+    </table>
+
+    <script src="../js/clientes.js"></script>
+  </body>
+</html>
