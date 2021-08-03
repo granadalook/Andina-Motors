@@ -9,50 +9,38 @@ class autos {
 
   mostrasAutos() {
     ordenarCarros();
-    document.getElementById("escribir").innerHTML +=
-      "Este auto es un " +
-      this.marca +
-      " de color " +
-      this.color +
-      " tiene un peso de " +
-      this.peso +
-      " kilos y cuenta con " +
-      this.potencia +
-      " caballos de fuerza fabricado en el año " +
-      this.modelo +
-      "<br>";
+    $("#tUsuario").append(
+      "<tr><td>" +
+        this.marca +
+        "</td><td>" +
+        this.color +
+        "</td><td>" +
+        this.modelo +
+        "</td><td>" +
+        this.potencia +
+        "</td><td>" +
+        this.peso +
+        "</td></tr>"
+    );
   }
 
   pesopoten() {
     let relacion = this.peso / this.potencia;
-    document.getElementById("escribir").innerHTML +=
-      "  la relacion peso potencia del " +
-      this.marca +
-      " es de " +
-      relacion +
-      " kl/hp" +
-      "<br><br>";
-    if (relacion > 0 && relacion < 1) {
-      alert(
-        "El " +
-          this.marca +
-          " cuenta con una relacion peso potencia menor a 1  exactamente  de " +
-          relacion +
-          " lo cual lo hace uno de los autos  mas rapidos del mundo"
-      );
-    } else if (relacion > 2.44 && relacion < 3) {
-      alert(
-        "El " +
-          this.marca +
-          " cuenta con una relacion mayor a 2 exactamente de " +
-          relacion +
-          "  lo que lo hace uno de los mas lentos del grupo"
-      );
-    }
+
+    $("#tRelacion").append(
+      "<tr><td>" +
+        this.marca +
+        "</td><td>" +
+        this.modelo +
+        "</td><td>" +
+        relacion +
+        "</td></tr>"
+    );
   }
 }
+
 let auto = [];
-let carros = []; //mayor modelo
+let carros = [];
 function inicializarAutos() {
   verLocalStorage();
   for (let i = 0; i < auto.length; i++) {
@@ -110,7 +98,7 @@ function verLocalStorage() {
     auto = JSON.parse(localStorage.getItem("autos"));
     console.log(auto);
   } else {
-    alert("No hay datos en local storage");
+    console.warn("No hay datos en local storage");
   }
 }
 inicializarAutos();

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clintes</title>
     <link rel="stylesheet" href="../css/clientes.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap"
       rel="stylesheet"
@@ -54,43 +55,45 @@
       </nav>
     </header>
     <hr />
-    <form class="furmu" action="">
-      <input type="text" placeholder="Nombre..." id="nombre" required /><br />
-      <input type="number" placeholder="cedula..." id="cedula" required /><br />
-      <input
+    <form class="form--container" action="" >
+      <div class="form--title">
+        <h1>AGREGAR CLIENTE</h1>
+        <img
+          class="form--title-icon"
+          src="../asset/icons/1814113_add_more_plus_icon.svg"
+          alt=""
+        />
+      </div>
+      <label for="nombre">Nombre Cliente</label>
+      <input type="text" placeholder="Nombre..." id="nombre" required  autocomplete="additional-name"/><br />
+      <label for="cedula">Cedula CLiente</label>
+      <input type="number" placeholder="Cedula..." id="cedula" required  autocomplete="cc-number"/><br />
+      <label for="telefono">Telefono Cliente</label><input
         type="tel"
-        placeholder="telefono..."
+        placeholder="Telefono..."
         id="telefono"
-        required
+        required  autocomplete="tel"
       /><br />
-      <input type="email" placeholder="email..." id="email" required />
+       <label for="email...">Email Cliente</label><input type="email" placeholder="Email..." id="email" required  autocomplete="email"/><br>
+      <button class="form--buttom" type="submit" id="verLista">AGREGAR CLIENTE</button>
     </form>
-    <br />
-
-    <button type="submit" id="verLista">AGREGAR OTRO CLIENTE</button>
-    <button type="submit" id="logLista">VER LISTA CLIENTES</button>
-
-    <table class="blueTable">
+   <hr>
+    <table class="minimalistBlack">
       <thead>
-        <tr>
-          <th>NOMBRE</th>
-          <th>CEDULA</th>
-          <th>TELEFONO</th>
-          <th>EMAIL</th>
-        </tr>
+      <tr>
+      <th>NOMBRE</th>
+      <th>CEDULA</th>
+      <th>TELEFONO</th>
+      <th>EMAIL</th>
+      </tr>
       </thead>
-      <tfoot>
-        <tr>
-          <td colspan="4">
-            <div class="links">
-              <a href="#">&laquo;</a> <a class="active" href="#">1</a>
-              <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>
-              <a href="#">&raquo;</a>
-            </div>
-          </td>
-        </tr>
-      </tfoot>
-      <tbody id="tUsuario"></tbody>
+      <tbody id="tUsuario">
+     
+      </tbody>
+      </table>
+   
+        
+      </tbody>
     </table>
 
     <script src="../js/clientes.js"></script>

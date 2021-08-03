@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reparacion</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/reparacion.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap"
       rel="stylesheet"
     />
+    <script src="../js/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header class="header-container">
@@ -94,11 +95,34 @@
         ><br />
       </form>
     </section>
-    <section class="java--container">
+    <!-- <section class="java--container">
       <div class="java--section">
         <p id="escribir"></p>
       </div>
-    </section>
-    <script src="../js/autos.js"></script>
+    </section> -->
+    <table class="minimalistBlack">
+      <thead>
+        <tr>
+          <th>MARCA</th>
+          <th>COLOR</th>
+          <th>MODELO</th>
+          <th>POTENCIA</th>
+          <th>PESO</th>
+        </tr>
+      </thead>
+
+      <tbody id="tUsuario"></tbody>
+    </table>
+    <table class="minimalistBlack">
+      <thead>
+        <tr>
+          <th>MARCA</th>
+          <th>MODELO</th>
+          <th>RELACION P/P</th>
+        </tr>
+      </thead>
+      <tbody id="tRelacion"></tbody>
+    </table>
+    <script src="../js/reparacion.js"></script>
   </body>
 </html>

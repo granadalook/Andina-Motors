@@ -7,6 +7,7 @@ class personas {
     this.email = email;
   }
 }
+
 function verPersona() {
   ordenarCedula();
   let contenido = "";
@@ -43,5 +44,6 @@ mostrar.onclick = () => {
   document.getElementById("cedula").value = "";
   document.getElementById("telefono").value = "";
   document.getElementById("email").value = "";
+
   verPersona();
 };

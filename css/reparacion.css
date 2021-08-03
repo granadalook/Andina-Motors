@@ -57,6 +57,18 @@
   color: rgb(116, 116, 116);
 }
 
+.java--container {
+  background-color: rgb(179, 179, 178);
+  border: solid 2px black;
+  width: 100%;
+}
+.java--section p {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Merriweather", serif;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+}
 table.minimalistBlack {
   font-family: "Merriweather", serif;
   border: 3px solid #000000;
@@ -90,6 +102,4 @@ table.minimalistBlack thead th {
   color: #000000;
   text-align: center;
 }
-table.minimalistBlack tfoot td {
-  font-size: 15px;
-}
+
