@@ -55,7 +55,7 @@
       </nav>
     </header>
     <hr />
-    <form class="form--container" action="" >
+    <form class="form--container" action="">
       <div class="form--title">
         <h1>AGREGAR CLIENTE</h1>
         <img
@@ -65,37 +65,53 @@
         />
       </div>
       <label for="nombre">Nombre Cliente</label>
-      <input type="text" placeholder="Nombre..." id="nombre" required  autocomplete="additional-name"/><br />
+      <input
+        type="text"
+        placeholder="Nombre..."
+        id="nombre"
+        required
+        autocomplete="additional-name"
+      /><br />
       <label for="cedula">Cedula CLiente</label>
-      <input type="number" placeholder="Cedula..." id="cedula" required  autocomplete="cc-number"/><br />
-      <label for="telefono">Telefono Cliente</label><input
+      <input
+        type="number"
+        placeholder="Cedula..."
+        id="cedula"
+        required
+        autocomplete="cc-number"
+      /><br />
+      <label for="telefono">Telefono Cliente</label
+      ><input
         type="tel"
         placeholder="Telefono..."
         id="telefono"
-        required  autocomplete="tel"
+        required
+        autocomplete="tel"
       /><br />
-       <label for="email...">Email Cliente</label><input type="email" placeholder="Email..." id="email" required  autocomplete="email"/><br>
-      <button class="form--buttom" type="submit" id="verLista">AGREGAR CLIENTE</button>
+      <label for="email...">Email Cliente</label
+      ><input
+        type="email"
+        placeholder="Email..."
+        id="email"
+        required
+        autocomplete="email"
+      /><br />
+      <button class="form--buttom" type="submit" id="verLista">
+        AGREGAR CLIENTE
+      </button>
     </form>
-   <hr>
+    <hr />
     <table class="minimalistBlack">
       <thead>
-      <tr>
-      <th>NOMBRE</th>
-      <th>CEDULA</th>
-      <th>TELEFONO</th>
-      <th>EMAIL</th>
-      </tr>
+        <tr>
+          <th>NOMBRE</th>
+          <th>CEDULA</th>
+          <th>TELEFONO</th>
+          <th>EMAIL</th>
+        </tr>
       </thead>
-      <tbody id="tUsuario">
-     
-      </tbody>
-      </table>
-   
-        
-      </tbody>
+      <tbody id="tUsuario"></tbody>
     </table>
-
     <script src="../js/clientes.js"></script>
   </body>
 </html>

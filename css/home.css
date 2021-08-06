@@ -1,0 +1,88 @@
+@import url(global.css);
+
+@import url(header.css);
+
+.rueda-container {
+  background-color: #d6d6d6;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.rueda-img img {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.llanta2 img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.rueda-container:hover .rueda-img {
+  transform: translate(250px) rotate(360deg);
+  transition: 2s;
+}
+.rueda-container:hover .llanta2 {
+  transform: translate(-250px) rotate(-360deg);
+  transition: 2s;
+}
+.card--container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 320px;
+  background-color: aqua;
+  font-size: 2rem;
+  border-radius: 15px;
+  border: solid 3px black;
+}
+.card--div {
+  border: solid 3px black;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: "Merriweather", serif;
+}
+
+.card--container2 {
+  display: none;
+
+  width: 100%;
+  height: 320px;
+  background-color: aqua;
+  font-size: 2rem;
+  border-radius: 15px;
+  border: solid 3px black;
+}
+.card--div2 {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  height: 280px;
+  background-color: rgb(21, 219, 219);
+  border: solid 3px black;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: "Merriweather", serif;
+}
+.card--div2 button {
+  width: 100px;
+  height: 30px;
+  background-color: aquamarine;
+  border: none;
+  border-radius: 5px;
+}
+.card--div2 button:hover {
+  background-color: antiquewhite;
+}
+.card--div2 button a {
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+  color: rgb(0, 0, 0);
+}

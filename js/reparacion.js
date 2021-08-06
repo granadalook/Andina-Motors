@@ -88,7 +88,7 @@ function mostrar() {
   guardarLocalStorage();
 }
 function ordenarCarros() {
-  carros.sort((a, b) => (a.modelo > b.modelo ? 1 : -1)); // if ternario  (condicion) ? resultado 1 : otro resultado :
+  carros.sort((a, b) => (a.modelo > b.modelo ? 1 : -1));
 }
 function guardarLocalStorage() {
   localStorage.setItem("autos", JSON.stringify(carros));
