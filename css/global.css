@@ -1,3 +1,16 @@
+:root {
+  --primay-color: #0C02B6;
+  --segundary-color:#DBEBF0;
+  --terciary-color:#34869C;
+  --white:white;
+  --gray:rgb(150, 150, 150);
+  --black:black;
+  --family: "Merriweather", serif;
+  --gradienteColor: linear-gradient(to bottom, #0c02b6, #0034c2, #1d51ca, #3d6bce, #5d84ce);
+  --gradienteColor2:  linear-gradient(to bottom, #5d84ce, #3d6bce, #1d51ca, #0034c2, #0c02b6);
+
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,8 +18,8 @@
   }
   html {
     font-size: 62.5%;
-    background-color: rgb(231, 231, 230);
+    background-color: var(--segundary-color)
   }
   body {
-    font-family: "Merriweather", serif;
+    font-family: var(--family)
   }
