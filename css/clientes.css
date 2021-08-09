@@ -19,7 +19,7 @@
 }
 .form--title h1 {
   font-size: 2.2rem;
-  color:var(--white);
+  color: var(--white);
   font-weight: bold;
 }
 .form--title-icon {
@@ -30,7 +30,7 @@
   width: 50%;
   height: 25px;
   font-size: 1.4rem;
-  background-color:var(--segundary-color);
+  background-color: var(--segundary-color);
   border-radius: 5px;
   font-weight: 100;
   border: none;
@@ -52,13 +52,12 @@
   border-radius: 15px;
   cursor: pointer;
   padding: 0 5px;
-  font-family:var(--family);
+  font-family: var(--family);
 }
 .form--buttom:hover {
   background-image: var(--gradienteColor2);
-  -webkit-box-shadow: 0px 0px 17px 4px rgba(255,255,255,0.72); 
-  box-shadow: 0px 0px 17px 4px rgba(255,255,255,0.72);
-  
+  -webkit-box-shadow: 0px 0px 17px 4px rgba(255, 255, 255, 0.72);
+  box-shadow: 0px 0px 17px 4px rgba(255, 255, 255, 0.72);
 }
 
 table.minimalistBlack {

@@ -33,9 +33,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 98%;
   height: 320px;
-  margin: 10px ;
+  margin: 1%;
   background-color: var(--terciary-color);
   font-size: 2rem;
   border-radius: 15px;
@@ -48,25 +48,23 @@
   font-family: var(--family);
   cursor: pointer;
   background-image: var(--gradienteColor);
- 
-  
 }
-.card--div:hover{
-  -webkit-box-shadow: 0px 0px 17px 4px rgba(255,255,255,0.72); 
-box-shadow: 0px 0px 17px 4px rgba(255,255,255,0.72);
-background-image: var(--gradienteColor2);
+.card--div:hover {
+  -webkit-box-shadow: 0px 0px 17px 4px rgba(255, 255, 255, 0.72);
+  box-shadow: 0px 0px 17px 4px rgba(255, 255, 255, 0.72);
+  background-image: var(--gradienteColor2);
 }
-.card--div h1{
-   color: var(--white);
-   font-weight: bold;
+.card--div h1 {
+  color: var(--white);
+  font-weight: bold;
 }
 
 .card--container2 {
   display: none;
-  width: 100%;
+  width: 98%;
   height: 320px;
-  margin: 10px ;
-  background-color:var(--terciary-color);
+  margin: 1%;
+  background-color: var(--terciary-color);
   font-size: 2rem;
   border-radius: 15px;
   border: solid 3px black;
@@ -77,15 +75,14 @@ background-image: var(--gradienteColor2);
   margin-top: 20px;
   width: 90%;
   height: 280px;
-  background-color:var(--white);
+  background-color: var(--white);
   border: solid 3px black;
   padding: 20px;
   border-radius: 15px;
-  font-family:var(--family);
- 
+  font-family: var(--family);
 }
-.card--div2 h1{
-   font-weight: bold;
+.card--div2 h1 {
+  font-weight: bold;
 }
 .card--div2 button {
   width: 100px;
@@ -93,10 +90,9 @@ background-image: var(--gradienteColor2);
   background-image: var(--gradienteColor2);
   border: none;
   border-radius: 5px;
- 
 }
 .card--div2 button:hover {
- background-image: var(--gradienteColor);
+  background-image: var(--gradienteColor);
 }
 .card--div2 button a {
   text-decoration: none;
