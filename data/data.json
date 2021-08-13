@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "marca":"Maclaren",
+        "modelo":2020,
+        "color": "Negro",
+        "potencia": 650,
+        "peso":1230
+    },
+    {
+        "id": 2,
+        "marca":"Nissan",
+        "modelo":2021,
+        "color": "Blanco",
+        "potencia": 420,
+        "peso":1200
+    },
+    {
+        "id": 3,
+        "marca":"Chevrolet",
+        "modelo":2019,
+        "color": "Negro",
+        "potencia": 650,
+        "peso":1460
+    },
+    {
+        "id": 4,
+        "marca":"Ford",
+        "modelo":2018,
+        "color": "Gris",
+        "potencia": 550,
+        "peso":1200
+    },
+    {
+        "id": 5,
+        "marca":"Lamborguini",
+        "modelo":20,
+        "color": "Blanco",
+        "potencia": 420,
+        "peso":1200
+    }
+]
