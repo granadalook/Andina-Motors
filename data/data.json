@@ -1,42 +1,172 @@
 [
-    {
-        "id": 1,
-        "marca":"Maclaren",
-        "modelo":2020,
-        "color": "Negro",
-        "potencia": 650,
-        "peso":1230
-    },
-    {
-        "id": 2,
-        "marca":"Nissan",
-        "modelo":2021,
-        "color": "Blanco",
-        "potencia": 420,
-        "peso":1200
-    },
-    {
-        "id": 3,
-        "marca":"Chevrolet",
-        "modelo":2019,
-        "color": "Negro",
-        "potencia": 650,
-        "peso":1460
-    },
-    {
-        "id": 4,
-        "marca":"Ford",
-        "modelo":2018,
-        "color": "Gris",
-        "potencia": 550,
-        "peso":1200
-    },
-    {
-        "id": 5,
-        "marca":"Lamborguini",
-        "modelo":20,
-        "color": "Blanco",
-        "potencia": 420,
-        "peso":1200
-    }
+  {
+    "id": 1,
+    "marca": "Maclaren",
+    "modelo": 2020,
+    "color": "Negro",
+    "potencia": 650,
+    "peso": 1230,
+    "logo": "../asset/icons/logo--mclaren.svg",
+    "url": "https://es.wikipedia.org/wiki/McLaren"
+  },
+  {
+    "id": 2,
+    "marca": "Nissan",
+    "modelo": 2021,
+    "color": "Blanco",
+    "potencia": 420,
+    "peso": 1200,
+    "logo": "../asset/icons/logo--nissan.svg",
+    "url": "https://es.wikipedia.org/wiki/Nissan"
+  },
+  {
+    "id": 3,
+    "marca": "Chevrolet",
+    "modelo": 2019,
+    "color": "Negro",
+    "potencia": 650,
+    "peso": 1460,
+    "logo": "../asset/icons/logo--chevrolet.svg",
+    "url": "https://es.wikipedia.org/wiki/Chevrolet"
+  },
+  {
+    "id": 4,
+    "marca": "Ford",
+    "modelo": 2018,
+    "color": "Gris",
+    "potencia": 550,
+    "peso": 1200,
+    "logo": "../asset/icons/logo--ford.svg",
+    "url": "https://es.wikipedia.org/wiki/Ford_Motor_Company"
+  },
+  {
+    "id": 5,
+    "marca": "Lamborguini",
+    "modelo": 2020,
+    "color": "Rojo",
+    "potencia": 420,
+    "peso": 1200,
+    "logo": "../asset/icons/logo--lamborghini.svg",
+    "url": "https://es.wikipedia.org/wiki/Lamborghini"
+  },
+  {
+    "id": 6,
+    "marca": "Land Rover",
+    "modelo": 2021,
+    "color": "Verde Militar",
+    "potencia": 620,
+    "peso": 1520,
+    "logo": "../asset/icons/logo--land-rover.svg",
+    "url": "https://es.wikipedia.org/wiki/Land_Rover"
+  },
+  {
+    "id": 7,
+    "marca": "Maserati",
+    "modelo": 2019,
+    "color": "Plata",
+    "potencia": 860,
+    "peso": 1220,
+    "logo": "../asset/icons/logo--maserati.svg",
+    "url": "https://es.wikipedia.org/wiki/Maserati"
+  },
+  {
+    "id": 8,
+    "marca": "Renault",
+    "modelo": 2018,
+    "color": "Gris",
+    "potencia": 320,
+    "peso": 1620,
+    "logo": "../asset/icons/logo--renault.svg",
+    "url": "https://es.wikipedia.org/wiki/Renault"
+  },
+  {
+    "id": 9,
+    "marca": "Toyota",
+    "modelo": 2020,
+    "color": "Blanco Perla",
+    "potencia": 420,
+    "peso": 1560,
+    "logo": "../asset/icons/logo--toyota.svg",
+    "url": "https://es.wikipedia.org/wiki/Toyota"
+  },
+  {
+    "id": 10,
+    "marca": "Ferrari",
+    "modelo": 2019,
+    "color": "Rojo ferrari",
+    "potencia": 650,
+    "peso": 1160,
+    "logo": "../asset/icons/logo--ferrari.svg",
+    "url": "https://es.wikipedia.org/wiki/Ferrari"
+  },
+  {
+    "id": 11,
+    "marca": "Mazda",
+    "modelo": 2018,
+    "color": "Rojo",
+    "potencia": 350,
+    "peso": 1160,
+    "logo": "../asset/icons/logo--mazda.svg",
+    "url": "https://es.wikipedia.org/wiki/Mazda"
+  },
+  {
+    "id": 12,
+    "marca": "Jaguar",
+    "modelo": 2021,
+    "color": "Negro perlado",
+    "potencia": 550,
+    "peso": 1460,
+    "logo": "../asset/icons/logo--jaguar.svg",
+    "url": "https://es.wikipedia.org/wiki/Jaguar_Cars"
+  },
+  {
+    "id": 13,
+    "marca": "Alfa Romeo",
+    "modelo": 2021,
+    "color": "Azul Perlado",
+    "potencia": 650,
+    "peso": 1340,
+    "logo": "../asset/icons/logo--alfaromeo.svg",
+    "url": "https://es.wikipedia.org/wiki/Alfa_Romeo"
+  },
+  {
+    "id": 14,
+    "marca": "Aston Martin",
+    "modelo": 2020,
+    "color": "Plata",
+    "potencia": 890,
+    "peso": 1140,
+    "logo": "../asset/icons/logo--astonmartin.svg",
+    "url": "https://es.wikipedia.org/wiki/Aston_Martin"
+  },
+  {
+    "id": 15,
+    "marca": "Mercedes Benz",
+    "modelo": 2021,
+    "color": "Plata",
+    "potencia": 450,
+    "peso": 1230,
+    "logo": "../asset/icons/logo--mercedesbenz.svg",
+    "url": "https://es.wikipedia.org/wiki/Mercedes-Benz"
+  },
+  {
+    "id": 16,
+    "marca": "Audi",
+    "modelo": 2021,
+    "color": "Negro",
+    "potencia": 660,
+    "peso": 1020,
+    "logo": "../asset/icons/logo--audi.svg",
+    "url": "https://es.wikipedia.org/wiki/Audi"
+  },
+  {
+    "id": 17,
+    "marca": "BMW",
+    "modelo": 2020,
+    "color": "Negro Perla",
+    "potencia": 770,
+    "peso": 1560,
+    "logo": "../asset/icons/logo--bmw.svg",
+    "url": "https://es.wikipedia.org/wiki/BMW"
+  }
 ]
