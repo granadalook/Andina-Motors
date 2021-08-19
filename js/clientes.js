@@ -1,10 +1,11 @@
 let datos = [];
 class personas {
-  constructor(nombre, cedula, telefono, email) {
+  constructor(nombre, cedula, telefono, email, placa) {
     this.nombre = nombre;
     this.cedula = cedula;
     this.telefono = telefono;
     this.email = email;
+    this.placa = placa;
   }
 }
 
@@ -21,6 +22,8 @@ function verPersona() {
       datos[index].telefono +
       "</td><td>" +
       datos[index].email +
+      "</td><td>" +
+      datos[index].placa +
       "</td></tr>";
     datos[index];
   }
@@ -36,14 +39,16 @@ mostrar.onclick = () => {
   let cedula = document.getElementById("cedula").value;
   let telefono = document.getElementById("telefono").value;
   let email = document.getElementById("email").value;
+  let placa = document.getElementById("placa").value
 
-  let people = new personas(nombre, cedula, telefono, email);
+  let people = new personas(nombre, cedula, telefono, email, placa);
   datos.push(people);
 
   document.getElementById("nombre").value = "";
   document.getElementById("cedula").value = "";
   document.getElementById("telefono").value = "";
   document.getElementById("email").value = "";
+  document.getElementById("placa").value = "";
 
   verPersona();
 };
