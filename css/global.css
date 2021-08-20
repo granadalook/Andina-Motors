@@ -40,5 +40,9 @@ html {
   background-color: var(--segundary-color);
 }
 body {
-  font-family: var(--family);
+  font-family: var(--family) !important;
+}
+.img--nav {
+  width: 50px;
+  height: 55px;
 }

@@ -1,10 +1,11 @@
 class autos {
-  constructor(marca, peso, potencia, color, modelo) {
+  constructor(marca, peso, potencia, color, modelo, placa) {
     this.marca = marca;
     this.peso = peso;
     this.potencia = potencia;
     this.color = color;
     this.modelo = modelo;
+    this.placa = placa;
   }
 
   mostrasAutos() {
@@ -29,7 +30,7 @@ class autos {
 
     $("#tRelacion").append(
       "<tr><td>" +
-        this.marca +
+        this.placa +
         "</td><td>" +
         this.modelo +
         "</td><td>" +
@@ -50,7 +51,8 @@ function inicializarAutos() {
         auto[i].peso,
         auto[i].potencia,
         auto[i].color,
-        auto[i].modelo
+        auto[i].modelo,
+        auto[i].placa
       )
     );
   }
@@ -64,14 +66,16 @@ function mostrar() {
   let modelo = document.getElementById("modelo").value;
   let potencia = document.getElementById("potencia").value;
   let peso = document.getElementById("peso").value;
+  let placa = document.getElementById("placa").value;
 
   document.getElementById("marca").value = "";
   document.getElementById("color").value = "";
   document.getElementById("modelo").value = "";
   document.getElementById("potencia").value = "";
   document.getElementById("peso").value = "";
+  document.getElementById("placa").value ="";
 
-  let ultimoCoche = new autos(marca, peso, potencia, color, modelo);
+  let ultimoCoche = new autos(marca, peso, potencia, color, modelo, placa);
   carros.push(ultimoCoche);
 
   if (primeraVez) {

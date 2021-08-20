@@ -39,7 +39,7 @@ mostrar.onclick = () => {
   let cedula = document.getElementById("cedula").value;
   let telefono = document.getElementById("telefono").value;
   let email = document.getElementById("email").value;
-  let placa = document.getElementById("placa").value
+  let placa = document.getElementById("placa").value;
 
   let people = new personas(nombre, cedula, telefono, email, placa);
   datos.push(people);

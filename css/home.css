@@ -4,7 +4,7 @@
 
 .rueda-container {
   background-color: var(--segundary-color);
-  padding-top: 114px;
+  padding-top: 51px;
   display: flex;
   justify-content: space-between;
 }
