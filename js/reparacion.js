@@ -73,7 +73,7 @@ function mostrar() {
   document.getElementById("modelo").value = "";
   document.getElementById("potencia").value = "";
   document.getElementById("peso").value = "";
-  document.getElementById("placa").value ="";
+  document.getElementById("placa").value = "";
 
   let ultimoCoche = new autos(marca, peso, potencia, color, modelo, placa);
   carros.push(ultimoCoche);
@@ -93,16 +93,5 @@ function mostrar() {
 }
 function ordenarCarros() {
   carros.sort((a, b) => (a.modelo > b.modelo ? 1 : -1));
-}
-function guardarLocalStorage() {
-  localStorage.setItem("autos", JSON.stringify(carros));
-}
-function verLocalStorage() {
-  if (localStorage.getItem("autos")) {
-    auto = JSON.parse(localStorage.getItem("autos"));
-    console.log(auto);
-  } else {
-    console.warn("No hay datos en local storage");
-  }
 }
 inicializarAutos();
