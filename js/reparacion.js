@@ -39,7 +39,6 @@ class autos {
     );
   }
 }
-
 let auto = [];
 let carros = [];
 function inicializarAutos() {
@@ -66,7 +65,7 @@ function mostrar() {
   let modelo = document.getElementById("modelo").value;
   let potencia = document.getElementById("potencia").value;
   let peso = document.getElementById("peso").value;
-  let placa = document.getElementById("placa").value;
+  let placa = document.getElementById("placa").value.toUpperCase();
 
   document.getElementById("marca").value = "";
   document.getElementById("color").value = "";
@@ -89,7 +88,7 @@ function mostrar() {
     ultimoCoche.pesopoten();
   }
 
-  guardarLocalStorage();
+guardarLocalStorage();
 }
 function ordenarCarros() {
   carros.sort((a, b) => (a.modelo > b.modelo ? 1 : -1));

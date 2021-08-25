@@ -7,21 +7,22 @@ class entrega {
     this.modelo = modelo;
     this.placa = placa;
   }
-// por mirar que hacemos  la idea es ponerlos en cards  de boostrap
-  mostrasAutos() {
-    $("#caso").append(
-      " <div>" +
-        this.marca +
-        this.color +
-        this.modelo +
-        this.potencia +
-        this.peso +
-        this.placa +
-        "</div>"
+  consultarAutos(cita) {
+  
+    $("#card").append(
+      "<div class="+"'card border-dark mb-3'"+" style= "+"'max-width: 18rem;'"+">"+
+        "<div  class="+"'card-header text-center'"+">"+this.placa+"</div>"+
+        "<div class="+"card-body"+">"+
+          "<h5  class="+"'card-title'"+">"+"Marca :"+this.marca+"</h5>"+
+          "<h5  class="+"'card-title'"+">" +"Color :"+this.color+" </h5>"+
+          "<h5  class="+"'card-title'"+">"+"Modelo :"+this.modelo+" </h5>"+
+        "</div>"+
+        "<div class="+"'card-footer bg-transparent border-dark mb-3'"+">Revision programada para el :<br>"+cita+"</div>"+
+        "</div>"+
+      "</div>"
     );
   }
 }
-
 let auto = [];
 let entregas = [];
 function inicializarAutos() {
@@ -40,9 +41,10 @@ function inicializarAutos() {
   }
 }
 
-inicializarAutos();
+function consultaReparacion() {
+  inicializarAutos();
 for (let index = 0; index < entregas.length; index++) {
-  entregas[index].mostrasAutos();
-}
-
-console.warn(entregas);
+let hoy = new Date();
+let fecha = (hoy.getDate()+index) + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
+entregas[index].consultarAutos(fecha);
+}} 

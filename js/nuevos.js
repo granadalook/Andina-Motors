@@ -1,6 +1,6 @@
 const URLJSON = "../data/data.json";
 
-$("#btn1").click(() => {
+$("#botonVerAutos").click(() => {
   $.getJSON(URLJSON, function (respuesta, estado) {
     if (estado === "success") {
       let misDatos = respuesta;
@@ -13,8 +13,9 @@ $("#btn1").click(() => {
                                     <h3>Color: ${dato.color}</h3>
                                     <h3> Peso: ${dato.peso} Kl</h3>
                                     <h3>potencia: ${dato.potencia} Hp</h3>
-                                    <br>
-                                    <button><a href="${dato.url}">SABER MAS DE LA MARCA</a> </button>
+                                    <br
+                                    <a class="btn btn-primary" href="" role="button"></a>
+                                    <a class="btn btn-primary" href="${dato.url}" role="button">Conoce Más</a>
                                   </div>
                                   <div class="article--card--divImg">
                                       <img src="${dato.logo}" alt="${dato.marca}">
