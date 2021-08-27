@@ -19,11 +19,10 @@ const vue = new Vue({
         message: this.message,
         subject: this.subject,
       };
-
       emailjs.send("service_ege7r6b", "template_tc44l4i", data).then(
         function (response) {
           if (response.text === "OK") {
-            alert("CLIENTE AGREGADO EXITOSAMENTE");
+            modalEnvio();
           }
           console.log(
             "SUCCESS. status=%d, text=%s",
@@ -32,10 +31,19 @@ const vue = new Vue({
           );
         },
         function (err) {
-          alert("OCURRIO UN PROBLEMA AL AGREGAR EL NUEVO CLIENTE");
+          modalError();
           console.log("FAILED. error=", err);
         }
       );
     },
   },
 });
+
+function modalEnvio() {
+  document.getElementById("botonModal");
+  $("#botonModal").trigger("click");
+}
+function modalError() {
+  document.getElementById("botonModalError");
+  $("#botonModalError").trigger("click");
+}

@@ -8,35 +8,15 @@ class autos {
     this.placa = placa;
   }
 
-  mostrasAutos() {
-    ordenarCarros();
-    $("#tUsuario").append(
-      "<tr><td>" +
-        this.marca +
-        "</td><td>" +
-        this.color +
-        "</td><td>" +
-        this.modelo +
-        "</td><td>" +
-        this.potencia +
-        "</td><td>" +
-        this.peso +
-        "</td></tr>"
-    );
-  }
-
-  pesopoten() {
+  pesopoten(number) {
     let relacion = this.peso / this.potencia;
 
-    $("#tRelacion").append(
-      "<tr><td>" +
-        this.placa +
-        "</td><td>" +
-        this.modelo +
-        "</td><td>" +
-        relacion +
-        "</td></tr>"
-    );
+    $("#tRelacion").append(`<tr>
+    <th scope="row">${number}</th>
+    <td>${this.placa}</td>
+    <td>${this.modelo}</td>
+    <td>${relacion}</td>
+  </tr>`);
   }
 }
 let auto = [];
@@ -60,11 +40,11 @@ function inicializarAutos() {
 let primeraVez = true;
 function mostrar() {
   console.log(auto);
-  let marca = document.getElementById("marca").value;
-  let color = document.getElementById("color").value;
-  let modelo = document.getElementById("modelo").value;
-  let potencia = document.getElementById("potencia").value;
-  let peso = document.getElementById("peso").value;
+  let marca = document.getElementById("marca").value.toUpperCase();
+  let color = document.getElementById("color").value.toUpperCase();
+  let modelo = document.getElementById("modelo").value.toUpperCase();
+  let potencia = document.getElementById("potencia").value.toUpperCase();
+  let peso = document.getElementById("peso").value.toUpperCase();
   let placa = document.getElementById("placa").value.toUpperCase();
 
   document.getElementById("marca").value = "";
@@ -80,15 +60,14 @@ function mostrar() {
   if (primeraVez) {
     primeraVez = false;
     for (let index = 0; index < carros.length; index++) {
-      carros[index].mostrasAutos();
-      carros[index].pesopoten();
+      carros[index].pesopoten(index);
     }
   } else {
-    ultimoCoche.mostrasAutos();
-    ultimoCoche.pesopoten();
+    let numberAuto = "Nuevo auto";
+    ultimoCoche.pesopoten(numberAuto);
   }
 
-guardarLocalStorage();
+  guardarLocalStorage();
 }
 function ordenarCarros() {
   carros.sort((a, b) => (a.modelo > b.modelo ? 1 : -1));

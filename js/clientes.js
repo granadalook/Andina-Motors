@@ -35,11 +35,11 @@ function ordenarCedula() {
 
 let mostrar = document.getElementById("verLista");
 mostrar.onclick = () => {
-  let nombre = document.getElementById("nombre").value;
-  let cedula = document.getElementById("cedula").value;
-  let telefono = document.getElementById("telefono").value;
-  let email = document.getElementById("email").value;
-  let placa = document.getElementById("placa").value;
+  let nombre = document.getElementById("nombre").value.toUpperCase();
+  let cedula = document.getElementById("cedula").value.toUpperCase();
+  let telefono = document.getElementById("telefono").value.toUpperCase();
+  let email = document.getElementById("email").value.toUpperCase();
+  let placa = document.getElementById("placa").value.toUpperCase();
 
   let people = new personas(nombre, cedula, telefono, email, placa);
   datos.push(people);

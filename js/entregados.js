@@ -8,7 +8,7 @@ class entrega {
     this.placa = placa;
   }
   consultarAutos(cita) {
-  
+  // sin comillas francesas
     $("#card").append(
       "<div class="+"'card border-dark mb-3'"+" style= "+"'max-width: 18rem;'"+">"+
         "<div  class="+"'card-header text-center'"+">"+this.placa+"</div>"+

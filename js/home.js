@@ -1,4 +1,4 @@
-$("#cardAnimation").click(function timeaut() {
+$("#cardAnimation").click(function look() {
   $("#cardAnimation").hide(1500);
   $("#cardAnimation2").toggle(1500);
 });

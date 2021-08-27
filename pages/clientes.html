@@ -22,6 +22,7 @@
       href="../asset/icons/1814113_add_more_plus_icon.svg"
       type="image/png"
     />
+    <script src="../js/jquery-3.6.0.min.js"></script>
   </head>
   <body>
     <header>
@@ -88,7 +89,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../pages/reparacion.html"
-                    >Mantenimiento y Reparacion<img
+                    >Mantenimiento y Reparación<img
                       src="../asset/icons/car_repair_black_24dp.svg"
                       alt="icon reparacion"
                   /></a>
@@ -112,7 +113,7 @@
         <div class="container">
           <div class="row justify-content-lg-center">
             <div class="form--title">
-              <h1>Con Andina Motors  tendras  confianza y seguridad siempre</h1>
+              <h1>Con Andina Motors tendras seguridad y confianza siempre</h1>
               <img
                 class="form--title-icon"
                 src="../asset/icons/1814113_add_more_plus_icon.svg"
@@ -132,24 +133,24 @@
               />
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2 fs-4 form-group">
-              <label> Correo: </label>
+              <label> E-mail: </label>
               <input
                 class="form-control"
                 type="email"
                 v-model="from_email"
-                placeholder="Email..."
+                placeholder="E-mail..."
                 id="email"
                 required
                 autocomplete="email"
               />
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2 fs-4 form-group">
-              <label> Cedula: </label>
+              <label> Cedúla: </label>
               <input
                 class="form-control"
                 type="number"
                 v-model="subject"
-                placeholder="Cedula..."
+                placeholder="Cedúla..."
                 id="cedula"
                 required
               />
@@ -165,11 +166,11 @@
               />
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2 fs-4 form-group">
-              <label> Telefono: </label>
+              <label> Teléfono: </label>
               <input
                 class="form-control"
                 type="tel"
-                placeholder="Telefono..."
+                placeholder="Teléfono..."
                 id="telefono"
                 required
                 autocomplete="tel"
@@ -189,19 +190,186 @@
         </div>
       </div>
       <hr />
-      <table class="minimalistBlack">
+      <button
+        id="botonModal"
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#modalEnvio"
+      ></button>
+      <div
+        class="modal fade"
+        id="modalEnvio"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border border-success">
+            <div class="modal-header">
+              <h5 class="modal-title fs-1" id="exampleModalLabel">
+                Andina Motors
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body fs-2">
+              Andina Motors te da la bienvenida pronto recibiras un correo de
+              confirmacion y tu primer codigo de descuento
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        id="botonModalError"
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#modalError"
+      ></button>
+      <div
+        class="modal fade"
+        id="modalError"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border border-danger">
+            <div class="modal-header">
+              <h5 class="modal-title fs-1" id="exampleModalLabel">
+                Andina Motors
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body fs-2">
+              Ha ocurrido un problema al agregar el cliente, por favor verifique
+              que todos los datos se encuentren llenos e intente de nuevo
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table class="table">
         <thead>
           <tr>
-            <th>NOMBRE</th>
-            <th>CEDULA</th>
-            <th>TELEFONO</th>
-            <th>EMAIL</th>
-            <th>PLACA</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Cedúla</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Placa</th>
           </tr>
         </thead>
         <tbody id="tUsuario"></tbody>
       </table>
     </main>
+    <footer class="text-center text-lg-start bg-dark text-white">
+      <section
+        class="
+          d-flex
+          justify-content-center justify-content-lg-center
+          p-4
+          border-bottom
+        "
+      >
+        <div class="me-5 d-lg-block fs-2">
+          <span>Seguridad y Confianza Siempre</span>
+        </div>
+      </section>
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4 fs-4">
+                <i class="fas fa-gem me-3"></i>Andina Motors
+              </h6>
+              <p class="fs-4">
+                Compañina 100% colombiana enfocada a la venta, reparación y
+                mantenimiento de vehículos de gamas alta, media y bajas con los
+                mejores estandares de calidad, el personal mejor capacitado y
+                todo el apoyo tecnológico que los vehículos requieran
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4 fs-4">Ir a</h6>
+              <p>
+                <a
+                  href="../pages/nuevos.html"
+                  class="text-reset text-decoration-none"
+                  >Vehículos Nuevos</a
+                >
+              </p>
+              <p>
+                <a
+                  href="../pages/clientes.html"
+                  class="text-reset text-decoration-none"
+                  >Quieres ser cliente</a
+                >
+              </p>
+              <p>
+                <a
+                  href="../pages/reparacion.html"
+                  class="text-reset text-decoration-none"
+                  >Agengar mantenimiento o reparación</a
+                >
+              </p>
+              <p>
+                <a
+                  href="../pages/entregados.html"
+                  class="text-reset text-decoration-none"
+                  >Agenda</a
+                >
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4 fs-4">Contactanos</h6>
+              <p>
+                <i class="fas fa-home me-3"></i> Quinchia,Risaralda,COLOMBIA
+              </p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                Tiven17.jsga@gmail.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> +57 313 614 4800</p>
+              <p><i class="fas fa-print me-3"></i> +57 314 573 7727</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright: Andina Motors Company
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
