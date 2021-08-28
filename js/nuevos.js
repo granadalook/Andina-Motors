@@ -5,7 +5,7 @@ $("#botonVerAutos").click(() => {
     if (estado === "success") {
       let misDatos = respuesta;
       for (const dato of misDatos) {
-        $("section").append(`<article class="article--card">
+        $("#autosList").append(`<article class="article--card">
                                   <div class="article--card--divtex">
                                     <h1> Auto: ${dato.id}</h1>
                                     <h3> Marca: ${dato.marca}</h3>
