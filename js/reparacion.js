@@ -1,3 +1,8 @@
+function modalvehiculo() {
+  document.getElementById("botonVehiculo");
+  $("#botonVehiculo").trigger("click");
+}
+
 class autos {
   constructor(marca, peso, potencia, color, modelo, placa) {
     this.marca = marca;
@@ -46,6 +51,12 @@ function mostrar() {
   let potencia = document.getElementById("potencia").value.toUpperCase();
   let peso = document.getElementById("peso").value.toUpperCase();
   let placa = document.getElementById("placa").value.toUpperCase();
+  if (marca===""||color===""|| modelo==="" || potencia===""||peso===""||placa==="") {
+    
+    modalvehiculo()
+  } else {
+    
+  
 
   document.getElementById("marca").value = "";
   document.getElementById("color").value = "";
@@ -68,6 +79,7 @@ function mostrar() {
   }
 
   guardarLocalStorage();
+}
 }
 function ordenarCarros() {
   carros.sort((a, b) => (a.modelo > b.modelo ? 1 : -1));

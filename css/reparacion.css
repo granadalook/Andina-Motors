@@ -16,3 +16,6 @@
   width: 5rem;
   height: 7rem;
 }
+#botonVehiculo{
+  display: none;
+}

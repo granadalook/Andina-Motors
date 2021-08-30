@@ -40,7 +40,9 @@ mostrar.onclick = () => {
   let telefono = document.getElementById("telefono").value.toUpperCase();
   let email = document.getElementById("email").value.toUpperCase();
   let placa = document.getElementById("placa").value.toUpperCase();
-
+  if (nombre==="" || cedula===""|| telefono===""|| email===""||placa==="") {
+    modalError() 
+  } else {
   let people = new personas(nombre, cedula, telefono, email, placa);
   datos.push(people);
 
@@ -49,6 +51,6 @@ mostrar.onclick = () => {
   document.getElementById("telefono").value = "";
   document.getElementById("email").value = "";
   document.getElementById("placa").value = "";
-
   verPersona();
+}
 };
