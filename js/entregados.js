@@ -9,7 +9,7 @@ class entrega {
     this.fechaCita = fechaCita;
   }
   consultarAutos() {
-   
+
   // sin comillas francesas
     $("#card").append(
       "<div class="+"'card border-dark mb-3'"+" style= "+"'max-width: 18rem;'"+">"+
