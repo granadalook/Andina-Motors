@@ -4,11 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 55px;
+  margin-top: 65px;
   font-family: var(--family);
   font-weight: bold;
 }
-.boton--nuevos{
+.boton--nuevos {
   display: flex;
   justify-content: center;
 }
