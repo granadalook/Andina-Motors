@@ -1,19 +1,18 @@
 @import url(global.css);
 @import url(header.css);
-.botton--consultar{
+.botton--consultar {
   display: flex;
   justify-content: center;
 }
 .container--section-card {
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.card{
+.card {
   min-width: 18rem !important;
-  margin: 5px!important;
+  margin: 5px !important;
 }
-.btn-primary{
-  margin-top: 55PX!important;
+.btn-primary {
+  margin-top: 60px !important;
 }
